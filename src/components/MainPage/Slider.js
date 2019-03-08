@@ -3,7 +3,6 @@ import {Pictures} from '../../data';
 
  const Slider = () => {
    const img = Pictures.swimming;
-   console.log(img)
     return (
       <div>
         <img src={img} />
