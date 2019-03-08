@@ -1,0 +1,71 @@
+.container {
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;  
+}
+.list {
+    font-size: 14px;
+    letter-spacing: 0.8rem;
+    font-family: "Lato", sans-serif;
+    text-align: left;  
+    position: absolute;
+    left: 9%;
+    bottom: 25%;  
+}
+ul {
+    padding: 0;
+}
+.list li{
+    list-style-type: none;
+    padding: 0.5rem;
+    border-top: 0.02px solid gray;
+    border-bottom: 0.02px solid gray;
+    color:var(--MainAqua);
+    letter-spacing: 0.8rem;    
+}
+li:hover {
+    color: var(--MainWhite);
+}
+.image {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+h2 {
+    padding-top: 15px;
+    letter-spacing: 0.8rem;  
+}
+h2:hover{
+    color:var(--MainRed);
+    transition: all 0.5s linear; 
+}
+.button {
+    position: absolute;
+    bottom: 15%;
+    border: 1px solid var(--MainWhite);
+    text-transform: capitalize;
+    letter-spacing: 0.6rem;
+    padding: 1rem;
+    transition: all 0.5s linear; 
+}
+span {
+    padding-right: 15px;
+}
+.button:hover{
+    background: var(--MainAqua);
+    color: var(--MainBlack);
+    font-weight: 900;
+    border-radius: 5px;
+}
+.socialNetwork{
+    position: absolute;
+    bottom: 4%;
+}
+.socialNetwork li {
+    display: inline-block;
+    letter-spacing: 1.3rem; 
+    font-size: 1.2rem; 
+    color: var(--MainAqua);
+}
+.socialNetwork li:hover {
+    color: var(--MainRed);
+}

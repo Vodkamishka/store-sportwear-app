@@ -1,33 +1,34 @@
-.App {
-  text-align: center;
+:root {
+  --MainBlack: #000;
+  --MainWhite: #fff;
+  --MainAqua: aqua;
+  --MainRed: red;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Neucha', sans-serif!important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainPage {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 
+   "navbar slider"
+   "navbar productList"
+   ".      productList"
 }
-
-.App-link {
-  color: #61dafb;
+.navbar {
+  grid-area: navbar;
+  background:var(--MainBlack);
+  color: var(--MainWhite);
+  height: 95vh;
+    
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider{
+  grid-area: slider;
+  
+  height: 75vh;
+}
+.productList{
+  grid-area: productList;
+  background: green;
 }
