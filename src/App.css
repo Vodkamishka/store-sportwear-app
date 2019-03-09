@@ -4,9 +4,9 @@
   --MainAqua: aqua;
   --MainRed: red;
 }
-
 body {
   font-family: 'Neucha', sans-serif!important;
+  box-sizing: border-box; 
 }
 .mainPage {
   display: grid;
@@ -20,15 +20,14 @@ body {
   grid-area: navbar;
   background:var(--MainBlack);
   color: var(--MainWhite);
-  height: 95vh;
-    
+  height: 100vh;
 }
 .slider{
   grid-area: slider;
-  
-  height: 75vh;
+  height: 80vh;
+  overflow: hidden;
 }
 .productList{
   grid-area: productList;
-  background: green;
+  
 }

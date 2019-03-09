@@ -1,54 +1,59 @@
+.container, .list, .image, h2, .button, .socialNetwork {
+    position: absolute;
+}
 .container {
     text-transform: uppercase;
-    letter-spacing: 0.8rem;  
+    letter-spacing: 0.8rem;
+    height: 100vh;
+    width: 100%;
 }
 .list {
-    font-size: 14px;
+    font-size: 1rem;
     letter-spacing: 0.8rem;
     font-family: "Lato", sans-serif;
     text-align: left;  
-    position: absolute;
-    left: 9%;
-    bottom: 25%;  
+    bottom: 26%;
+    left: 3%;  
 }
 ul {
     padding: 0;
 }
 .list li{
     list-style-type: none;
-    padding: 0.5rem;
+    padding: 0.6rem;
     border-top: 0.02px solid gray;
     border-bottom: 0.02px solid gray;
-    color:var(--MainAqua);
+    color: var(--MainAqua);
     letter-spacing: 0.8rem;    
 }
 li:hover {
     color: var(--MainWhite);
 }
 .image {
-    position: absolute;
     top: 5%;
     left: 10%;
 }
 h2 {
-    padding-top: 15px;
-    letter-spacing: 0.8rem;  
+    letter-spacing: 0.8rem; 
+    top: 35%; 
+    left: 4%;   
 }
-h2:hover{
-    color:var(--MainRed);
+h2:hover {
+    color: var(--MainRed);
     transition: all 0.5s linear; 
 }
 .button {
-    position: absolute;
     bottom: 15%;
     border: 1px solid var(--MainWhite);
     text-transform: capitalize;
     letter-spacing: 0.6rem;
-    padding: 1rem;
+    padding: 1.1rem;
     transition: all 0.5s linear; 
+    width: 87%;
+    display: flex;
 }
 span {
-    padding-right: 15px;
+    padding-right: 15px;   
 }
 .button:hover{
     background: var(--MainAqua);
@@ -57,14 +62,14 @@ span {
     border-radius: 5px;
 }
 .socialNetwork{
-    position: absolute;
-    bottom: 4%;
+    bottom: 5%;
 }
 .socialNetwork li {
-    display: inline-block;
+    display: inline;
     letter-spacing: 1.3rem; 
     font-size: 1.2rem; 
     color: var(--MainAqua);
+    position: relative;
 }
 .socialNetwork li:hover {
     color: var(--MainRed);

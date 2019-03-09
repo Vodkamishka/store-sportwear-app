@@ -1,0 +1,28 @@
+.container {
+    height: 80vh;  
+    position: relative;
+}
+
+button {
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--MainWhite); 
+    border: none;
+    font-size: 30px;
+}
+button:hover {
+    background: var(--MainAqua);
+    font-size: 30px;
+}
+.right {
+    right: 0;
+}
+img {
+    position: absolute;
+    transition: all 1s linear;
+}
+

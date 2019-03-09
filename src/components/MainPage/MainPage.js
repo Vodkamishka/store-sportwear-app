@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Slider from './Slider';
 import ProductList from './ProductList';
 import styled from 'styled-components';
 import Navbar from './Navbar/Navbar';
+import Slider from './Slider/Slider';
 
 export default class MainPage extends Component {
   render() {

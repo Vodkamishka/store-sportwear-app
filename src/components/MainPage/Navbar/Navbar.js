@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import style from './Navbar.module.css';
-import { NavbarList,Fa, Pictures } from '../../../data';
+import { NavbarList,Fa, Logo } from '../../../data';
 
 const Navbar = () => {
-  const img = Pictures.runner;
+  const img = Logo.runner;
   return (
     <div className={style.container}>
       <div className={style.image}>
-      <img src={img} style = {{width:250, height:250}}></img>
-      <h2>Sportwear</h2>
+      <img src={img} style = {{width:250, height:250}} />
       </div>
+      <h2>Sportwear</h2>
       <div className={style.list}>
         <ul>
           {NavbarList.map((element) => {
@@ -18,8 +18,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className = {style.button}>
-      <div><span><i className="fas fa-shopping-cart"></i></span>
-      Shopping Cart</div>
+      <span><i className="fas fa-shopping-cart"></i></span>
+      <div>Shopping Cart</div>
       </div>
       <div className={style.socialNetwork}>
       <ul>
