@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductList from './ProductList';
+import ProductList from './ProductList/ProductList';
 import styled from 'styled-components';
 import Navbar from './Navbar/Navbar';
 import Slider from './Slider/Slider';

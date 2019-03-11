@@ -48,7 +48,7 @@ export default class Slider extends Component {
     render() {
       return (
       <div className = {style.container}>
-      {this.state.sliderImages.map(Element => <img src = {Element.img} key = {Element.id} style = {{left: 1344*Element.id - this.state.left - 2688}}/>)}
+      {this.state.sliderImages.map(element => <img src = {element.img} alt = {element.alt} key = {element.id} style = {{left: 1344*element.id - this.state.left - 2688}}/>)}
       <button className = {style.left} onClick = {this.moveLeft}><i className="fas fa-angle-left"></i></button>
       <button className = {style.right} onClick = {this.moveRight}><i className="fas fa-angle-right"></i></button>
       </div>

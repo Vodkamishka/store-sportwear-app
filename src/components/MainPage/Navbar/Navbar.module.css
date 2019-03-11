@@ -46,11 +46,12 @@ h2:hover {
     bottom: 15%;
     border: 1px solid var(--MainWhite);
     text-transform: capitalize;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.55rem;
     padding: 1.1rem;
     transition: all 0.5s linear; 
     width: 87%;
     display: flex;
+    font-family: 'Indie Flower', sans-serif;
 }
 span {
     padding-right: 15px;   
