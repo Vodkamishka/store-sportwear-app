@@ -27,8 +27,9 @@ body {
   height: 80vh;
   overflow: hidden;
 }
-.productList{
+.productList {
   grid-area: productList;
+  
 }
 .text {
   font-family: 'Indie Flower', sans-serif;

@@ -3,6 +3,7 @@ import style from './Navbar.module.css';
 import { NavbarList, Fa, Logo } from '../../../data';
 import Text from './Text';
 import Fab from './Fab';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const img = Logo.runner;
@@ -23,7 +24,12 @@ const Navbar = () => {
       </div>
       <div className={style.socialNetwork}>
         <ul>
-          {Fa.map((element) => <Fab fab = {element.fab} key = {element.id} />)}
+          {Fa.map((element) => {
+          return <a href = {element.path} rel="noopener noreferrer" target="_blank" >
+          <Fab fab = {element.fab} key = {element.id} />
+          </a>
+          })
+        }
         </ul>
       </div>
     </div>

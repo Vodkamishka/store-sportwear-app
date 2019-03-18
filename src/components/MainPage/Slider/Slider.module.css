@@ -3,7 +3,7 @@
     position: relative;
 }
 
-button {
+.left, .right {
     position: absolute;
     background: rgba(0,0,0,0.3);
     width: 60px;
@@ -14,15 +14,20 @@ button {
     border: none;
     font-size: 30px;
 }
-button:hover {
+.left:hover, .right:hover  {
     background: var(--MainAqua);
     font-size: 30px;
 }
 .right {
     right: 0;
 }
-img {
-    position: absolute;
-    transition: all 1s linear;
+
+.left{
+    
 }
+.img {
+    position: absolute;
+    transition: all 1s linear;  
+}
+
 
