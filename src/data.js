@@ -7,14 +7,14 @@ export const NavbarList = [
     {text: "blog", id: 61}
 ];
 export const Fa = [
-    {fab: "fab fa-vk", id: 11, path: "https://www.facebook.com/andrey.deynega"},  
-    {fab: "fab fa-facebook", id: 21, path: "https://www.facebook.com/andrey.deynega"},
-    {fab: "fab fa-odnoklassniki", id: 31, path: "https://www.facebook.com/andrey.deynega"},
-    {fab: "fab fa-linkedin-in", id: 41, path: "https://www.facebook.com/andrey.deynega"},
-    {fab: "fab fa-github", id: 51, path: "https://github.com/Vodkamishka"},
-    {fab: "fab fa-react", id: 61, path: "https://github.com/Vodkamishka/store-sportwear-app"},
-    {fab: "fab fa-twitter", id: 71, path: "https://www.facebook.com/andrey.deynega"},
-    {fab: "fab fa-instagram", id: 81, path: "https://www.facebook.com/andrey.deynega"}
+    {fab: "fab fa-vk", id: 17, path: "https://www.facebook.com/andrey.deynega"},  
+    {fab: "fab fa-facebook", id: 26, path: "https://www.facebook.com/andrey.deynega"},
+    {fab: "fab fa-odnoklassniki", id: 314, path: "https://www.facebook.com/andrey.deynega"},
+    {fab: "fab fa-linkedin-in", id: 414, path: "https://www.facebook.com/andrey.deynega"},
+    {fab: "fab fa-github", id: 514, path: "https://github.com/Vodkamishka"},
+    {fab: "fab fa-react", id: 614, path: "https://github.com/Vodkamishka/store-sportwear-app"},
+    {fab: "fab fa-twitter", id: 714, path: "https://www.facebook.com/andrey.deynega"},
+    {fab: "fab fa-instagram", id: 814, path: "https://www.facebook.com/andrey.deynega"}
 ]
 export const Logo = {runner: "img/runner.png"};
 
@@ -122,7 +122,7 @@ export const storeProducts = [
     total: 0
 },
 {
-    id: 6,
+    id: 667889,
     title: "Small Weight Sceleton",
     img: "img/products/sceleton.jpg",
     price: 16,

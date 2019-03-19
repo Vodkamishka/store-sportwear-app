@@ -2,18 +2,23 @@
     position: absolute;
 }
 .container {
+    position: absolute;
     text-transform: uppercase;
     letter-spacing: 0.8rem;
     height: 100vh;
-    width: 100%;
+    width: 20%;
+    left: 0;
+    background: black;
+    color: white;
+    
 }
 .list {
     font-size: 1rem;
     letter-spacing: 0.8rem;
     font-family: "Lato", sans-serif;
     text-align: left;  
-    bottom: 26%;
-    left: 3%;  
+    bottom: 25%;
+    left: 7%;  
 }
 ul {
     padding: 0;
@@ -30,20 +35,21 @@ li:hover {
     color: var(--MainWhite);
 }
 .image {
-    top: 5%;
-    left: 10%;
+    top: 2%;
+    left: 12%;
 }
 h2 {
     letter-spacing: 0.8rem; 
-    top: 35%; 
-    left: 4%;   
+    top: 34%; 
+    left: 10%;   
 }
 h2:hover {
     color: var(--MainRed);
     transition: all 0.5s linear; 
 }
 .button {
-    bottom: 15%;
+    bottom: 14%;
+    left: 4%;
     border: 1px solid var(--MainWhite);
     text-transform: capitalize;
     letter-spacing: 0.55rem;
@@ -63,7 +69,8 @@ span {
     border-radius: 5px;
 }
 .socialNetwork{
-    bottom: 5%;
+    bottom: 4%;
+    left: 4%;
 }
 .socialNetwork li {
     display: inline;

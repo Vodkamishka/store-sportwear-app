@@ -1,14 +1,16 @@
 import React from 'react';
 import style from './Navbar.module.css';
-import { NavbarList, Fa, Logo } from '../../../data';
+import { NavbarList, Fa, Logo } from '../../data';
 import Text from './Text';
 import Fab from './Fab';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+
 
 const Navbar = () => {
   const img = Logo.runner;
   return (
-    <div className={style.container}>
+    <NavbarWrapper className={style.container}>
       <div className={style.image}>
         <img src={img} style={{ width: 250, height: 250 }} alt = "runner" />
       </div>
@@ -32,9 +34,22 @@ const Navbar = () => {
         }
         </ul>
       </div>
-    </div>
+    </NavbarWrapper>
   )
 }
 
 export default Navbar;
 
+const NavbarWrapper = styled.div`
+.container {
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  height: 100vh;
+  width: 20%;
+  left: 0;
+  background: black;
+  color: white;
+  
+}
+`;

@@ -8,19 +8,23 @@ body {
   font-family: 'Neucha', sans-serif!important;
   box-sizing: border-box; 
 }
-.mainPage {
+.MainBlock {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: 
-   "navbar slider"
-   "navbar productList"
-   ".      productList"
+   "navbar mainPage"
+   "navbar mainPage"
+   ".      mainPage"
+}
+.mainPage {
+  grid-area: mainPage;
 }
 .navbar {
   grid-area: navbar;
-  background:var(--MainBlack);
   color: var(--MainWhite);
   height: 100vh;
+  position: absolute;
+  background: var(--MainBlack);
 }
 .slider{
   grid-area: slider;
