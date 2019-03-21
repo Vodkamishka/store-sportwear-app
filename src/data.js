@@ -136,3 +136,17 @@ export const storeProducts = [
 }
 ];
 
+export const detailProduct = 
+    {
+        id: 55,
+        title: "Btoperform Blue",
+        img: "img/products/blue.jpg",
+        price: 10,
+        alt: "blue",
+        company: "Btoperform",
+        info: 
+        "The wolf is a predatory large mammal, the most widely distributed on the planet. In Russia, the wolf is absent only in one region - on Sakhalin. Rashgard - versatile clothing. You can practice boxing, yoga, fitness, swimming, ride a bike, play basketball, volleyball, go for walks, go hiking and so on. First of all, it is wear-resistant clothing, which, with proper care, will serve you for a long time. The stitches are very strong, stitched on a 4-needle sewing machine. The fabric stretches well, but does not tear. This is facilitated by spandex, which is part of it. Drawing sublimated in fabric - is not erased when washing.",
+        inCart: false,
+        count: 0,
+        total: 0
+    }

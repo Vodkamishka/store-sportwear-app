@@ -33,10 +33,15 @@ ul {
 }
 li:hover {
     color: var(--MainWhite);
+    transform: scale(1.02); 
 }
 .image {
     top: 2%;
     left: 12%;
+
+}
+.image:hover {
+    mix-blend-mode: luminosity;
 }
 h2 {
     letter-spacing: 0.8rem; 
@@ -45,7 +50,8 @@ h2 {
 }
 h2:hover {
     color: var(--MainRed);
-    transition: all 0.5s linear; 
+    transition: all 0.5s linear;
+    
 }
 .button {
     bottom: 14%;

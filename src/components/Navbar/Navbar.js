@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className={style.socialNetwork}>
         <ul>
           {Fa.map((element) => {
-          return <a href = {element.path} rel="noopener noreferrer" target="_blank" >
+          return <a href = {element.path} key = {element.id + 1} rel="noopener noreferrer" target="_blank" >
           <Fab fab = {element.fab} key = {element.id} />
           </a>
           })

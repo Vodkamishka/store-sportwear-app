@@ -8,16 +8,16 @@ body {
   font-family: 'Neucha', sans-serif!important;
   box-sizing: border-box; 
 }
-.MainBlock {
+.MainContainer {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: 
-   "navbar mainPage"
-   "navbar mainPage"
-   ".      mainPage"
+   "navbar wrapper"
+   "navbar wrapper"
+   ".      wrapper"
 }
-.mainPage {
-  grid-area: mainPage;
+.wrapper {
+  grid-area: wrapper;
 }
 .navbar {
   grid-area: navbar;
@@ -33,7 +33,6 @@ body {
 }
 .productList {
   grid-area: productList;
-  
 }
 .text {
   font-family: 'Indie Flower', sans-serif;

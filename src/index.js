@@ -5,7 +5,7 @@ import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {ProductProvider} from './context';
 
-export const drawAllTree = () => {
+
     ReactDOM.render(
 <ProductProvider>
 <Router>
@@ -13,9 +13,9 @@ export const drawAllTree = () => {
 </Router>
 </ProductProvider>
 , document.getElementById('root'));
-    }
+    
 
-drawAllTree ();
+
 
 
 

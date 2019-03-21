@@ -5,7 +5,7 @@ import style from './Slider.module.css';
 export default class Slider extends Component {
   state = {
     left: 1344,
-    sliderImages: SliderImages,
+    sliderImages: [...SliderImages],
     timer: 0
   }
   componentDidMount = () => {
