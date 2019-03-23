@@ -20,32 +20,38 @@ export const Logo = {runner: "img/runner.png"};
 
 
 export const SliderImages = [
-    {img: "img/slider/bridge.jpeg",id: 1, alt: "bridge", opacity: 0}, 
-    {img: "img/slider/bycicles.jpeg",id: 2, alt: "bycicles", opacity: 0},
-    {img: "img/slider/girls.jpeg",id: 3, alt: "girls", opacity: 0}, 
-    {img: "img/slider/power.jpeg",id: 4, alt: "power", opacity: 0}, 
-    {img: "img/slider/sport.jpeg",id: 5, alt: "sport", opacity: 0},
-    {img: "img/slider/swimming.jpeg",id: 6, alt: "swimming", opacity: 1}
+    {img: "img/slider/bridge.jpeg",id: 1, alt: "bridge"}, 
+    {img: "img/slider/bycicles.jpeg",id: 2, alt: "bycicles"},
+    {img: "img/slider/girls.jpeg",id: 3, alt: "girls"}, 
+    {img: "img/slider/power.jpeg",id: 4, alt: "power"}, 
+    {img: "img/slider/sport.jpeg",id: 5, alt: "sport"},
+    {img: "img/slider/swimming.jpeg",id: 6, alt: "swimming"}
 ];
 
 export const storeProducts = [
 {
     id: 55,
-    title: "Btoperform Blue",
-    img: "img/products/blue.jpg",
-    price: 10,
-    alt: "blue",
-    company: "Btoperform",
-    info: 
-    "The wolf is a predatory large mammal, the most widely distributed on the planet. In Russia, the wolf is absent only in one region - on Sakhalin. Rashgard - versatile clothing. You can practice boxing, yoga, fitness, swimming, ride a bike, play basketball, volleyball, go for walks, go hiking and so on. First of all, it is wear-resistant clothing, which, with proper care, will serve you for a long time. The stitches are very strong, stitched on a 4-needle sewing machine. The fabric stretches well, but does not tear. This is facilitated by spandex, which is part of it. Drawing sublimated in fabric - is not erased when washing.",
-    inCart: false,
-    count: 0,
-    total: 0
+        title: "Btoperform Blue",
+        img: "img/products/blue.jpg",
+        img1: "img/products/blue1.jpg",
+        img2: "img/products/blue2.jpg",
+        img3: "img/products/blue3.jpg",
+        price: 10,
+        alt: "blue",
+        company: "Btoperform",
+        info: 
+        "The wolf is a predatory large mammal, the most widely distributed on the planet. In Russia, the wolf is absent only in one region - on Sakhalin. Rashgard - versatile clothing. You can practice boxing, yoga, fitness, swimming, ride a bike, play basketball, volleyball, go for walks, go hiking and so on. First of all, it is wear-resistant clothing, which, with proper care, will serve you for a long time. The stitches are very strong, stitched on a 4-needle sewing machine. The fabric stretches well, but does not tear. This is facilitated by spandex, which is part of it. Drawing sublimated in fabric - is not erased when washing.",
+        inCart: false,
+        count: 0,
+        total: 0
 },
 {
     id: 590,
     title: "Fixgear Iron Man",
     img: "img/products/iron.jpg",
+    img1: "img/products/iron1.jpg",
+    img2: "img/products/iron2.jpg",
+    img3: "img/products/iron3.jpg",
     price: 15,
     company: "Tatami",
     alt: "cross",
@@ -85,6 +91,9 @@ export const storeProducts = [
     id: 54565,
     title: "Venum Tiger vs Dragon",
     img: "img/products/tiger.jpg",
+    img1: "img/products/tiger1.jpg",
+    img2: "img/products/tiger2.jpg",
+    img3: "img/products/tiger3.jpg",
     price: 14,
     alt: "tiger",
     company: "Guchi",
@@ -98,6 +107,9 @@ export const storeProducts = [
     id: 59045678,
     title: "Animal Image Wolf",
     img: "img/products/wolf.jpg",
+    img1: "img/products/wolf1.jpg",
+    img2: "img/products/wolf2.jpg",
+    img3: "img/products/wolf3.jpg",
     price: 15,
     company: "Fudji",
     alt: "wolf",
@@ -146,8 +158,6 @@ export const detailProduct =
         price: 10,
         alt: "blue",
         company: "Btoperform",
-        productCode: "Product 8",
-        availabality: "In Stock",
         info: 
         "The wolf is a predatory large mammal, the most widely distributed on the planet. In Russia, the wolf is absent only in one region - on Sakhalin. Rashgard - versatile clothing. You can practice boxing, yoga, fitness, swimming, ride a bike, play basketball, volleyball, go for walks, go hiking and so on. First of all, it is wear-resistant clothing, which, with proper care, will serve you for a long time. The stitches are very strong, stitched on a 4-needle sewing machine. The fabric stretches well, but does not tear. This is facilitated by spandex, which is part of it. Drawing sublimated in fabric - is not erased when washing.",
         inCart: false,

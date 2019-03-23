@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class InfoPanel extends Component {
   render() {
+    const inCart = this.props.inCart;
+    const id = this.props.id;
+    const addToCart = this.props.addToCart;
+    console.log(addToCart)
     return (
       <InfoPanelWrapper>
         <div className="container">
-
 
           <div className="title text-uppercase">
             {this.props.title}
@@ -22,25 +25,28 @@ export default class InfoPanel extends Component {
             <span> <i className="far fa-star "></i></span>
           </div>
 
-          <div className = "info font-weight-bold">INFO</div>
+          <div className="info font-weight-bold">INFO</div>
 
-          <div className = "info-block">
-          <p>- Brand: {this.props.company}</p>
-          <p>- Product Code: {this.props.productCode}</p>
-          <p>- Reward Points: 700</p>
-          <p>- Availability: {this.props.availabality}</p>
-          
-          <div className = "price font-weight-bold ">
-          ${this.props.price}
+          <div className="info-block">
+            <p>- Brand: {this.props.company}</p>
+            <p>- Weight: 165 g</p>
+            <p>- Material: Spandex, Poliester</p>
+            <p>- Availability: In Stock</p>
+
+            <div className="price font-weight-bold ">
+              ${this.props.price}
+            </div>
+
           </div>
 
-          </div>
-          
-          <div className = "buttons">
-          <Link to = "/">
-          <button className = "return"><span><i class="fas fa-tshirt"></i></span>Return to Products</button>
-          </Link>
-          <button className = "addToCart"><span><i className="fas fa-shopping-cart"></i></span>Add to cart</button>
+          <div className="buttons">
+            <Link to="/">
+              <button className="back"><span><i class="fas fa-store"></i></span>Back to Products</button>
+            </Link>
+            <button disabled={inCart ? true : false}
+              onClick={() => addToCart(id)}
+              className="add"><span><i className="fas fa-shopping-cart"></i></span>
+              {inCart ? "Rushguard in Cart" : "Add To Cart"} </button>
           </div>
 
         </div>
@@ -91,15 +97,12 @@ button {
   background: var(--MainBlack);
   color: var(--MainWhite);
 }
-.addToCart {
-  
-}
-.addToCart:hover {
+.add:hover {
   background: var(--MainAqua);
   color: var(--MainBlack);
   border-radius: 5px;
 }
-.return:hover {
+.back:hover {
   background: darkorange;
   color: var(--MainBlack);
   border-radius: 5px;

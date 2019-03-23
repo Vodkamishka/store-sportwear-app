@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 export default class ImageFrame extends Component {
     state = {
-        img: this.props.img1
+        img: this.props.img
     }
     movePictureFrame = (path) => {
         this.setState(() => {
@@ -33,10 +33,10 @@ export default class ImageFrame extends Component {
       </div>
       </div>
       <div className  = "row imagesGallery mt-4">
-      <div className = "block" onClick = {this.movePictureFrame.bind(ImageFrame,img)}><img src = {img} alt = "product" /></div>
-      <div className = "block" onClick = {this.movePictureFrame.bind(ImageFrame,img1)}><img src = {img1} alt = "product" /></div>
-      <div className = "block" onClick = {this.movePictureFrame.bind(ImageFrame,img2)}><img src = {img2} alt = "product" /></div>
-      <div className = "block" onClick = {this.movePictureFrame.bind(ImageFrame,img3)}><img src = {img3} alt = "product" /></div>
+      <div className = "block" onClick = {() => this.movePictureFrame(img)}><img src = {img} alt = "product" /></div>
+      <div className = "block" onClick = {() => this.movePictureFrame(img1)}><img src = {img1} alt = "product" /></div>
+      <div className = "block" onClick = {() => this.movePictureFrame(img2)}><img src = {img2} alt = "product" /></div>
+      <div className = "block" onClick = {() => this.movePictureFrame(img3)}><img src = {img3} alt = "product" /></div>
       </div>
       </div>
       </ImageFrameWrapper>
@@ -88,6 +88,6 @@ i:hover {
     height: 80%;
 }
 img {
-    transform: all 1s ease;
+    transition: all 1s ease;
 }
 `;

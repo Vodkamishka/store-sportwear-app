@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SliderImages} from '../../../data';
+import { SliderImages, Left } from '../../../data';
 import style from './Slider.module.css';
 
 export default class Slider extends Component {

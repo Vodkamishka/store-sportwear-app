@@ -13,7 +13,8 @@ export default class Details extends Component {
       <WrapperDetails>
       <ProductConsumer>
         {value => {
-          const {id, company, img, img1, img2, img3, info, price, title, inCart, productCode, availabality} = value.detailProduct;
+          const {id, company, img, img1, img2, img3, info, price, title, inCart} = value.detailProduct;
+          const addToCart = value.addToCart;
           return (
             <div className = "container-fluid">
             <div className = "row">
@@ -21,7 +22,7 @@ export default class Details extends Component {
             <ImageFrame title = {title} img = {img} img1 = {img1} img2 = {img2} img3 = {img3} />
             </div>
             <div className = "col-10 col-md-6 ">
-            <InfoPanel title = {title} company = {company} productCode = {productCode} availabality = {availabality} price = {price}/>
+            <InfoPanel id = {id} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} />
             </div>
             </div>
             </div>
