@@ -19,13 +19,19 @@ const Navbar = () => {
       <h2>Sportwear</h2>
       <div className={style.list}>
         <ul>
-          {NavbarList.map((element) => <Text text={element.text} key={element.id} />)}
+          {NavbarList.map((element) => 
+          <Link to = {element.path}>
+          <Text text={element.text} key={element.id} />
+          </Link>
+          )}
         </ul>
       </div>
+      <Link to = "/cart">
       <div className={style.button}>
         <span><i className="fas fa-shopping-cart"></i></span>
         <div>Shopping Cart</div>
       </div>
+      </Link>
       <div className={style.socialNetwork}>
         <ul>
           {Fa.map((element) => {
@@ -53,5 +59,8 @@ const NavbarWrapper = styled.div`
   background: black;
   color: white;
   
+}
+a {
+  text-decoration: none;
 }
 `;

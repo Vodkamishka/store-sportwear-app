@@ -1,10 +1,10 @@
 export const NavbarList = [
-    {text: "home", id: 11},
-    {text: "rushguards", id: 21}, 
-    {text: "man", id: 31},
-    {text: "woman", id: 41},
-    {text: "cart", id: 51},
-    {text: "blog", id: 61}
+    {text: "home", id: 11, path: "/"},
+    {text: "rushguards", id: 21, path: "/"}, 
+    {text: "man", id: 31, path: "/"},
+    {text: "woman", id: 41, path: "/"},
+    {text: "cart", id: 51, path: "/cart"},
+    {text: "blog", id: 61, path: "/blog"}
 ];
 export const Fa = [
     {fab: "fab fa-vk", id: 17, path: "https://www.facebook.com/andrey.deynega"},  

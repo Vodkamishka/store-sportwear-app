@@ -29,7 +29,7 @@ ul {
     border-top: 0.02px solid gray;
     border-bottom: 0.02px solid gray;
     color: var(--MainAqua);
-    letter-spacing: 0.8rem;    
+    letter-spacing: 0.8rem;
 }
 li:hover {
     color: var(--MainWhite);
@@ -64,6 +64,7 @@ h2:hover {
     width: 87%;
     display: flex;
     font-family: 'Indie Flower', sans-serif;
+    color: var(--MainWhite);
 }
 span {
     padding-right: 15px;   
