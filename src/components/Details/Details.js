@@ -14,7 +14,7 @@ export default class Details extends Component {
       <ProductConsumer>
         {value => {
           const {id, company, img, img1, img2, img3, info, price, title, inCart} = value.detailProduct;
-          const addToCart = value.addToCart;
+          const {addToCart,  openModal} = value;
           return (
             <div className = "container-fluid">
             <div className = "row">
@@ -22,7 +22,7 @@ export default class Details extends Component {
             <ImageFrame title = {title} img = {img} img1 = {img1} img2 = {img2} img3 = {img3} />
             </div>
             <div className = "col-10 col-md-6 ">
-            <InfoPanel id = {id} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} />
+            <InfoPanel id = {id} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} openModal = {openModal}/>
             </div>
             </div>
             </div>

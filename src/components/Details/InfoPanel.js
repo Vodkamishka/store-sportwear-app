@@ -7,7 +7,7 @@ export default class InfoPanel extends Component {
     const inCart = this.props.inCart;
     const id = this.props.id;
     const addToCart = this.props.addToCart;
-    console.log(addToCart)
+    const openModal = this.props.openModal;
     return (
       <InfoPanelWrapper>
         <div className="container">
@@ -44,7 +44,10 @@ export default class InfoPanel extends Component {
               <button className="back"><span><i class="fas fa-store"></i></span>Back to Products</button>
             </Link>
             <button disabled={inCart ? true : false}
-              onClick={() => addToCart(id)}
+              onClick={() => {
+                addToCart(id);
+                openModal(id);
+              }}
               className="add"><span><i className="fas fa-shopping-cart"></i></span>
               {inCart ? "Rushguard in Cart" : "Add To Cart"} </button>
           </div>

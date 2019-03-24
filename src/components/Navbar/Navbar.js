@@ -12,7 +12,9 @@ const Navbar = () => {
   return (
     <NavbarWrapper className={style.container}>
       <div className={style.image}>
+      <Link to = "/">
         <img src={img} style={{ width: 250, height: 250 }} alt = "runner" />
+      </Link>
       </div>
       <h2>Sportwear</h2>
       <div className={style.list}>

@@ -15,7 +15,8 @@ export default class ProductList extends Component {
             <div className="row">
               <ProductConsumer>
                 {value => {
-                  return value.products.map((product) => <Product key={product.id} product={product} />)
+                  const {openModal} = value;
+                  return value.products.map((product) => <Product key={product.id} product={product} openModal = {openModal}/>)
                 }}
               </ProductConsumer>
               </div>
