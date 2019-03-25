@@ -10,7 +10,6 @@ export default class extends Component {
                 {(value) => {
                     const { modalOpen, closeModal } = value;
                     const { img, title, price } = value.modalProduct;
-                    console.log(closeModal);
                     if (!modalOpen) {
                         return null
                     }
@@ -19,16 +18,23 @@ export default class extends Component {
                             <ModalContainer>
                                 <div className="container">
                                     <div className="row">
-                                        <div id ="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5">
-                                            <h5> item added to the cart</h5>
-                                            <img src={img} className= "img-fluid" alt= "product"/>
+
+                                        <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-4">
+                                            <button onClick={() => closeModal()} type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <h5 className = "font-weight-bold"> item added to the cart</h5>
+                                            <img src={img} className="img-fluid m-1" alt="product" />
                                             <h5>{title}</h5>
-                                            <h5 className ="text-muted">price : $ {price}</h5>
-                                            <Link to = "/">
-                                            <div><button onClick = {() => closeModal()}>Store</button></div>
+                                            <h5 className="text-muted">price : $ {price}</h5>
+                                            <Link to="/">
+                                                <div><button className="button" onClick={() => closeModal()}><i class="fas fa-store"></i> Back To Products</button></div>
                                             </Link>
-                                            <Link to = "/cart">
-                                            <div><button onClick = {() => closeModal()}>Go to Cart</button></div>
+                                            <Link to="/details">
+                                                <div><button className="button" onClick={() => closeModal()}><i class="fas fa-tshirt"></i> See Details</button></div>
+                                            </Link>
+                                            <Link to="/cart">
+                                                <div><button className="button" onClick={() => closeModal()}><i className="fas fa-shopping-cart"></i>  Go To Cart</button></div>
                                             </Link>
                                         </div>
                                     </div>
@@ -54,5 +60,23 @@ align-items: center;
 justify-content: center;
 #modal {
     background: var(--MainWhite);
+}
+.button {
+ width: 95%;
+ background: var(--MainBlack);
+ color: var(--MainWhite);
+ padding: 2%;
+ margin: 2%;
+ font-family: 'Indie Flower', sans-serif;
+ font-size: 1.1rem;
+ text-transform: capitalize;
+}
+.button:hover {
+    background: var(--MainAqua);
+    color: var(--MainBlack);
+    border-radius: 5%;
+}
+i {
+    font-size: 0.8rem;
 }
 `;

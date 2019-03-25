@@ -50,6 +50,9 @@ export default class InfoPanel extends Component {
               }}
               className="add"><span><i className="fas fa-shopping-cart"></i></span>
               {inCart ? "Rushguard in Cart" : "Add To Cart"} </button>
+              <Link to="/">
+              <button className="go"><span><i class="fas fa-luggage-cart"></i></span>Go to Cart</button>
+            </Link>
           </div>
 
         </div>
@@ -92,7 +95,7 @@ button {
   width: 100%;
   text-transform: capitalize;
   font-family: 'Indie Flower', sans-serif;;
-  margin: 2% 0;
+  margin: 1% 0;
   padding: 2%;
   font-weight: bold;
   transition: all 1s ease;
@@ -109,5 +112,9 @@ button {
   background: darkorange;
   color: var(--MainBlack);
   border-radius: 5px;
+}
+.go:hover {
+  background: MediumSpringGreen;
+  color: var(--MainBlack);
 }
 `;

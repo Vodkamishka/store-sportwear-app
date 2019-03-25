@@ -2,52 +2,58 @@ import React, { Component } from 'react';
 import { NavbarList, Fa, Logo } from '../../data';
 import Text from './Text';
 import Fab from './Fab';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {ProductConsumer} from '../../context';
+import { ProductConsumer } from '../../context';
 
-
-export default class Navbar extends Component  {
+export default class Navbar extends Component {
   render() {
-  const img = Logo.runner;
-  return (
-    <NavbarWrapper >
-      <div className = "container">
-      <div className= "image">
-      <Link to = "/">
-        <img src={img} style={{ width: 250, height: 250 }} alt = "runner" />
-      </Link>
-      </div>
-      <h2>Sportwear</h2>
-      <div className= "list">
-        <ul>
-          {NavbarList.map((element) => 
-          <Link to = {element.path}>
-          <Text text={element.text} key={element.id} />
-          </Link>
-          )}
-        </ul>
-      </div>
-      <Link to = "/cart">
-      <div className= "button">
-        <span><i className="fas fa-shopping-cart"></i></span>
-        <div>Shopping Cart</div>
-      </div>
-      </Link>
-      <div className="socialNetwork">
-        <ul>
-          {Fa.map((element) => {
-          return <a href = {element.path} key = {element.id + 1} rel="noopener noreferrer" target="_blank" >
-          <Fab fab = {element.fab} key = {element.id} />
-          </a>
-          })
-        }
-        </ul>
-      </div>
-      </div>
-    </NavbarWrapper>
-  )
-}}
+    const img = Logo.runner;
+    return (
+      <NavbarWrapper >
+        <ProductConsumer>
+          {value => {
+             const {cartLength} = value;
+             console.log(cartLength);
+            return (<div className="container">
+              <div className="image">
+                <Link to="/">
+                  <img src={img} style={{ width: 250, height: 250 }} alt="runner" />
+                </Link>
+              </div>
+              <h2>Sportwear</h2>
+              <div className="list">
+                <ul>
+                  {NavbarList.map((element) =>
+                    <Link to={element.path} key = {element.id +23}>
+                      <Text text={element.text} key={element.id} />
+                    </Link>
+                  )}
+                </ul>
+              </div>
+              <Link to="/cart">
+                <div className="button">
+                <div>Shopping Cart  <span><i className="fas fa-shopping-cart"></i>{ cartLength === 0 ? (null) : (cartLength) }</span></div>
+                  </div>
+              </Link>
+              <div className="socialNetwork">
+                <ul>
+                  {Fa.map((element) => {
+                    return <a href={element.path} key={element.id + 1} rel="noopener noreferrer" target="_blank" >
+                      <Fab fab={element.fab} key={element.id} />
+                    </a>
+                  })
+                  }
+                </ul>
+              </div>
+            </div>
+            )
+          }}
+        </ProductConsumer>
+      </NavbarWrapper>
+    )
+  }
+}
 const NavbarWrapper = styled.div`
 .container, .list, .image, h2, .button, .socialNetwork {
   position: absolute;
@@ -87,7 +93,6 @@ li:hover {
 .image {
   top: 2%;
   left: 12%;
-
 }
 .image:hover {
   mix-blend-mode: luminosity;
@@ -100,17 +105,16 @@ h2 {
 h2:hover {
   color: var(--MainRed);
   transition: all 0.5s linear;
-  
 }
 .button {
   bottom: 14%;
-  left: 4%;
+  right: 6%;
   border: 1px solid var(--MainWhite);
   text-transform: capitalize;
   letter-spacing: 0.55rem;
   padding: 1.1rem;
   transition: all 0.5s linear; 
-  width: 87%;
+  width: 93%;
   display: flex;
   font-family: 'Indie Flower', sans-serif;
   color: var(--MainWhite);
@@ -121,7 +125,7 @@ span {
 .button:hover{
   background: var(--MainAqua);
   color: var(--MainBlack);
-  font-weight: 900;
+  font-weight: 600;
   border-radius: 5px;
 }
 .socialNetwork{
