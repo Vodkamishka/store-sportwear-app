@@ -20,7 +20,7 @@ export default class extends Component {
                                     <div className="row">
 
                                         <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-4">
-                                            <button onClick={() => closeModal()} type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <button onClick={() => closeModal()} type="button" className="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>
                                             <h5 className = "font-weight-bold"> item added to the cart</h5>

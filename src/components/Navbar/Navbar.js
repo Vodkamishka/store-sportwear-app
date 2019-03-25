@@ -14,7 +14,6 @@ export default class Navbar extends Component {
         <ProductConsumer>
           {value => {
              const {cartLength} = value;
-             console.log(cartLength);
             return (<div className="container">
               <div className="image">
                 <Link to="/">

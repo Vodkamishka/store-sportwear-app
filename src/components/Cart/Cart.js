@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import EmptyCart from './EmptyCart';
 import { ProductConsumer } from '../../context';
+import CartList from './CartList';
+import CartTotals from "./CartTotals";
 
 export default class Cart extends Component {
   render() {
@@ -19,10 +21,14 @@ export default class Cart extends Component {
         </CartWrapper>
         <ProductConsumer>
           {value => {
-            const { cartLength } = value;
-            if (cartLength > 0) {
+            const { cart } = value;
+            if (cart.length > 0) {
               return (
+                <React.Fragment>
                 <CartColumns />
+                <CartList value = {value}/>
+                <CartTotals value = {value}/>
+                </React.Fragment>
               )
             }
             else { return <EmptyCart /> }
