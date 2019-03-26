@@ -18,7 +18,7 @@ export default class ImageFrame extends Component {
       const img3 = this.props.img3;
     return (
       <ImageFrameWrapper>
-      <div className = 'container p-5'>
+      <div className = 'container col-10 col-lg-12 p-5'>
       <div className = "row">
       <Link to = "/">
       <span><i className = "fas fa-home"></i></span>

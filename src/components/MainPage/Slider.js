@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { SliderImages} from '../../../data';
+import { SliderImages} from '../../data';
 import styled from 'styled-components';
 
 export default class Slider extends Component {
   state = {
     left: 1344,
-    sliderImages: SliderImages,
+    sliderImages: [],
     timer: 0
   }
   componentDidMount = () => {
+    this.setSlider ();
     const timer = setInterval(() => {
       this.moveRight();
     }, 4000);
@@ -24,13 +25,13 @@ export default class Slider extends Component {
       return {
         left: state.left + 1344
       }
-    });
-    setTimeout(() => {
+    }, () => {
       let sliderImages = this.state.sliderImages;
       let moveElement = sliderImages.shift();
       moveElement.id = moveElement.id + 6;
       sliderImages.push(moveElement);
-    }, 1000);
+    }
+    );
   }
   moveRight = () => {
     let sliderImages = this.state.sliderImages;
@@ -43,11 +44,21 @@ export default class Slider extends Component {
       }
     });
   }
+  setSlider = () => {
+    let tempSlider = [];
+    SliderImages.forEach((element) => {
+      let tempElement = {...element};
+      tempSlider = [...tempSlider, tempElement];
+    })
+    this.setState(()=> {
+      return {sliderImages: tempSlider};
+    })
+  }
   render() {
     return (
       <SliderWrapper>
-      <div className = "sliderContainer">
-        {this.state.sliderImages.map(element => <img className = "img" src={element.img} alt={element.alt} id={element.id} left={this.state.left} key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
+      <div className = "container-fluid col-9 mx-auto col-md-6 col-lg-12">
+        {this.state.sliderImages.map(element => <img className = "img" src={element.img} alt={element.alt}  key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
         <button className = "left" onClick={this.moveLeft}><i className="fas fa-angle-left"></i></button>
         <button className = "right" onClick={this.moveRight}><i className="fas fa-angle-right"></i></button>
       </div>
@@ -57,7 +68,7 @@ export default class Slider extends Component {
 }
 
 const SliderWrapper = styled.div`
-.sliderContainer {
+.container-fluid {
     height: 80vh;  
     position: relative;
 }

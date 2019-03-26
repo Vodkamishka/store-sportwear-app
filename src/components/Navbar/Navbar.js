@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavbarList, Fa, Logo } from '../../data';
 import Text from './Text';
 import Fab from './Fab';
 import { Link } from 'react-router-dom';
@@ -8,16 +7,15 @@ import { ProductConsumer } from '../../context';
 
 export default class Navbar extends Component {
   render() {
-    const img = Logo.runner;
     return (
       <NavbarWrapper >
         <ProductConsumer>
           {value => {
-             const {cartLength} = value;
+             const { cart, Logo, NavbarList, Fa} = value;
             return (<div className="container">
               <div className="image">
                 <Link to="/">
-                  <img src={img} style={{ width: 250, height: 250 }} alt="runner" />
+                  <img src={Logo.runner} style={{ width: 250, height: 250 }} alt="runner" />
                 </Link>
               </div>
               <h2>Sportwear</h2>
@@ -32,7 +30,7 @@ export default class Navbar extends Component {
               </div>
               <Link to="/cart">
                 <div className="button">
-                <div>Shopping Cart  <span><i className="fas fa-shopping-cart"></i>{ cartLength === 0 ? (null) : (cartLength) }</span></div>
+                <div>Shopping Cart  <span><i className="fas fa-shopping-cart"></i>{ cart.length === 0 ? (null) : (cart.length) }</span></div>
                   </div>
               </Link>
               <div className="socialNetwork">

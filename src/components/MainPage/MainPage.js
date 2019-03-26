@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList/ProductList';
-import Slider from './Slider/Slider';
+import Slider from './Slider';
 
 export default class MainPage extends Component {
   render() {

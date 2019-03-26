@@ -46,6 +46,8 @@ body {
 .text-blue:hover{
   color: var(--MainAqua);
 }
-.fa-trash {
-  color: var(--MainAqua);
+.aqua:hover {
+  background: var(--MainAqua);
+  color: var(--MainWhite);
 }
+

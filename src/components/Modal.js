@@ -27,11 +27,8 @@ export default class extends Component {
                                             <img src={img} className="img-fluid m-1" alt="product" />
                                             <h5>{title}</h5>
                                             <h5 className="text-muted">price : $ {price}</h5>
-                                            <Link to="/">
-                                                <div><button className="button" onClick={() => closeModal()}><i class="fas fa-store"></i> Back To Products</button></div>
-                                            </Link>
                                             <Link to="/details">
-                                                <div><button className="button" onClick={() => closeModal()}><i class="fas fa-tshirt"></i> See Details</button></div>
+                                                <div><button className="button" onClick={() => closeModal()}><i className="fas fa-tshirt"></i> See Details</button></div>
                                             </Link>
                                             <Link to="/cart">
                                                 <div><button className="button" onClick={() => closeModal()}><i className="fas fa-shopping-cart"></i>  Go To Cart</button></div>
@@ -66,7 +63,7 @@ justify-content: center;
  background: var(--MainBlack);
  color: var(--MainWhite);
  padding: 2%;
- margin: 2%;
+ margin: 1%;
  font-family: 'Indie Flower', sans-serif;
  font-size: 1.1rem;
  text-transform: capitalize;

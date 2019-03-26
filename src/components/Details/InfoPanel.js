@@ -41,7 +41,7 @@ export default class InfoPanel extends Component {
 
           <div className="buttons">
             <Link to="/">
-              <button className="back"><span><i class="fas fa-store"></i></span>Back to Products</button>
+              <button className="back"><span><i className="fas fa-store"></i></span>Back to Products</button>
             </Link>
             <button disabled={inCart ? true : false}
               onClick={() => {
@@ -50,9 +50,7 @@ export default class InfoPanel extends Component {
               }}
               className="add"><span><i className="fas fa-shopping-cart"></i></span>
               {inCart ? "Rushguard in Cart" : "Add To Cart"} </button>
-              
           </div>
-
         </div>
       </InfoPanelWrapper>
     )

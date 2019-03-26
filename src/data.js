@@ -18,7 +18,6 @@ export const Fa = [
 ]
 export const Logo = {runner: "img/runner.png"};
 
-
 export const SliderImages = [
     {img: "img/slider/bridge.jpeg",id: 1, alt: "bridge"}, 
     {img: "img/slider/bycicles.jpeg",id: 2, alt: "bycicles"},

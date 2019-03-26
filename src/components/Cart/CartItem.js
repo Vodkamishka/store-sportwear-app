@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 export default function CartItem({value, item}) {
   const {id, title, img, price, total, count} = item;
   const {increment, decrement, removeItem} = value;
     
   return (
+    <CartItemWrapper>
     <div className = "row my-2 text-capitalize text-center">
 
     <div className = "col-10 mx-auto col-lg-2">
@@ -23,15 +25,15 @@ export default function CartItem({value, item}) {
     <div className = "col-10 mx-auto col-lg-2 my-2 my-2 my-lg-0">
     <div className  = "d-flex justify-content-center">
     <div>
-    <span className = "btn mx-1">{count}</span>
-    <span className = "btn mx-1" onClick = {() => decrement(id)}>-</span>
-    <span className = "btn mx-1" onClick = {() => increment(id)}>+</span>
+    <span className = "py-2 px-3">{count}</span>
+    <span className = "plus py-3 px-4" onClick = {() => decrement(id)}>-</span>
+    <span className = "plus py-3 px-4" onClick = {() => increment(id)}>+</span>
     </div>
     </div>
     </div>
     
     <div className = "col-10 mx-auto col-lg-2">
-    <div className = "cart-icon" onClick = {() => removeItem()}>
+    <div className = "cart-icon" onClick = {() => removeItem(id)}>
     <i className  = "fas fa-trash"></i>
     </div>
     </div>
@@ -41,5 +43,20 @@ export default function CartItem({value, item}) {
     </div>
 
     </div>
+    </CartItemWrapper>
   )
 }
+
+const CartItemWrapper = styled.div`
+.plus {
+  transition: all 1s linear;
+}
+.plus:hover {
+  background: var(--MainAqua);
+  border-radius: 0%;
+  color: var(--MainWhite);
+}
+.fa-trash {
+  color: var(--MainAqua);
+}
+`;

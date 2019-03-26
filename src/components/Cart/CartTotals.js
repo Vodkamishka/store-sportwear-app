@@ -9,8 +9,8 @@ export default function CartTotals({value}) {
         <div className = "row">
         <div className = "col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
         <Link to = "/">
-        <button className = "button mb-3 px-3" type="button" onClick = {() => clearCart()}>
-        clear cart
+        <button className = "button mb-3 px-4 py-1 aqua" type="button" onClick = {() => clearCart()}>
+        Clear Cart
         </button>
         </Link>
         <h5>
