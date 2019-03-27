@@ -8,6 +8,7 @@ export default class InfoPanel extends Component {
     const id = this.props.id;
     const addToCart = this.props.addToCart;
     const openModal = this.props.openModal;
+    const description = this.props.info;
     return (
       <InfoPanelWrapper>
         <div className="container">
@@ -37,6 +38,11 @@ export default class InfoPanel extends Component {
               ${this.props.price}
             </div>
 
+          </div>
+
+          <div className = 'description mt-3'>
+          <p className="font-weight-bold">Description:</p>
+          {description}
           </div>
 
           <div className="buttons">
@@ -71,7 +77,7 @@ const InfoPanelWrapper = styled.div`
 .info {
   font-size: 18px;
   font-family: "Lato", sans-serif;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .info-block {
   font-family: "Lato", sans-serif;
@@ -82,10 +88,10 @@ const InfoPanelWrapper = styled.div`
   margin-top: 3%;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
-  padding: 10% 0 10% 0;
+  padding: 1% 0 1% 0;
 }
 .buttons {
-  margin-top: 9%;
+  margin-top: 3%;
 }
 button {
   width: 100%;
@@ -108,5 +114,9 @@ button {
   background: darkorange;
   color: var(--MainBlack);
   border-radius: 5px;
+}
+.description {
+ 
+ font-family: "Frank Ruhl Libre", sans-serif;
 }
 `;

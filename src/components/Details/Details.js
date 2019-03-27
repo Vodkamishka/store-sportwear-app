@@ -21,7 +21,7 @@ export default class Details extends Component {
             <ImageFrame title = {title} img = {img} img1 = {img1} img2 = {img2} img3 = {img3} />
             </div>
             <div className = "col-10 col-md-6 ">
-            <InfoPanel id = {id} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} openModal = {openModal}/>
+            <InfoPanel id = {id} info = {info} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} openModal = {openModal}/>
             </div>
             </div>
             </div>

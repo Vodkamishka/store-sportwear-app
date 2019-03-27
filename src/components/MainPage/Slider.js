@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { SliderImages} from '../../data';
+import { SliderImages } from '../../data';
 import styled from 'styled-components';
 
 export default class Slider extends Component {
   state = {
     left: 1344,
     sliderImages: [],
-    timer: 0
+    timer: 0,
+    i: 2
   }
+
   componentDidMount = () => {
-    this.setSlider ();
+
+    this.setSlider();
     const timer = setInterval(() => {
       this.moveRight();
     }, 4000);
@@ -19,6 +22,7 @@ export default class Slider extends Component {
       }
     });
   }
+
   moveLeft = () => {
     clearInterval(this.state.timer);
     this.setState((state) => {
@@ -32,6 +36,7 @@ export default class Slider extends Component {
       sliderImages.push(moveElement);
     }
     );
+    this.setActiveBlockLeft ();
   }
   moveRight = () => {
     let sliderImages = this.state.sliderImages;
@@ -43,31 +48,64 @@ export default class Slider extends Component {
         left: state.left - 1344
       }
     });
+    this.setActiveBlockRight();
   }
   setSlider = () => {
     let tempSlider = [];
     SliderImages.forEach((element) => {
-      let tempElement = {...element};
+      let tempElement = { ...element };
       tempSlider = [...tempSlider, tempElement];
     })
-    this.setState(()=> {
-      return {sliderImages: tempSlider};
+    this.setState(() => {
+      return { sliderImages: tempSlider };
+    })
+  }
+  setActiveBlockRight = () => {
+    let i = this.state.i;
+    let collection = document.querySelectorAll(".blocks");
+    collection[i].classList.remove('active');
+    i = i + 1;
+    if (i > collection.length - 1) { i = 0 }
+    collection[i].classList.add('active');
+    this.setState(() => {
+      return { i: i }
+    })
+  }
+  setActiveBlockLeft = () => {
+    let i = this.state.i;
+    let collection = document.querySelectorAll(".blocks");
+    collection[i].classList.remove('active');
+    i = i - 1;
+    if (i < 0) { i = collection.length - 1 }
+    collection[i].classList.add('active');
+    this.setState(() => {
+      return { i: i }
     })
   }
   render() {
     return (
       <SliderWrapper>
-      <div className = "container-fluid col-9 mx-auto col-md-6 col-lg-12">
-        {this.state.sliderImages.map(element => <img className = "img" src={element.img} alt={element.alt}  key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
-        <button className = "left" onClick={this.moveLeft}><i className="fas fa-angle-left"></i></button>
-        <button className = "right" onClick={this.moveRight}><i className="fas fa-angle-right"></i></button>
-      </div>
+        <div className="container-fluid col-9 mx-auto col-md-6 col-lg-12">
+
+          {this.state.sliderImages.map(element => <img className="img" src={element.img} alt={element.alt} key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
+          <button className="left" onClick={this.moveLeft}><i className="fas fa-angle-left"></i></button>
+          <button className="right" onClick={this.moveRight}><i className="fas fa-angle-right"></i></button>
+          <div className="blockWrapper">
+            <div className="blocks"></div>
+            <div className="blocks"></div>
+            <div className="blocks active"></div>
+            <div className="blocks"></div>
+            <div className="blocks"></div>
+            <div className="blocks"></div>
+          </div>
+        </div>
       </SliderWrapper>
     )
   }
 }
 
 const SliderWrapper = styled.div`
+background: var(--MainBlack);
 .container-fluid {
     height: 80vh;  
     position: relative;
@@ -90,8 +128,29 @@ const SliderWrapper = styled.div`
 .right {
   right: 0;
 }
+.left {
+  left: 0;
+}
 .img {
   position: absolute;
   transition: all 1s linear;  
+}
+.blockWrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5%;
+  transform: translate(-50%);
+}
+.blocks {
+  width: 10px;
+  height: 10px;
+  background: rgba(0,0,0,0.8);
+  display: inline-block;
+  margin: 10px;
+  transition: all 1s linear;
+  border-radius: 50%;  
+}
+.active {
+  background: var(--MainAqua);
 }
 `;

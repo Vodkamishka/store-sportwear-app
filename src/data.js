@@ -1,6 +1,6 @@
 export const NavbarList = [
     {text: "home", id: 11, path: "/"},
-    {text: "rushguards", id: 21, path: "/#productList"}, 
+    {text: "rushguards", id: 21, path: "/details"}, 
     {text: "man", id: 31, path: "/"},
     {text: "woman", id: 41, path: "/"},
     {text: "cart", id: 51, path: "/cart"},
@@ -20,11 +20,11 @@ export const Logo = {runner: "img/runner.png"};
 
 export const SliderImages = [
     {img: "img/slider/bridge.jpeg",id: 1, alt: "bridge"}, 
-    {img: "img/slider/bycicles.jpeg",id: 2, alt: "bycicles"},
+    {img: "img/slider/bycicles.jpg",id: 2, alt: "bycicles"},
     {img: "img/slider/girls.jpeg",id: 3, alt: "girls"}, 
     {img: "img/slider/power.jpeg",id: 4, alt: "power"}, 
-    {img: "img/slider/sport.jpeg",id: 5, alt: "sport"},
-    {img: "img/slider/swimming.jpeg",id: 6, alt: "swimming"}
+    {img: "img/slider/sport.jpg",id: 5, alt: "sport"},
+    {img: "img/slider/swimming.jpg",id: 6, alt: "swimming"}
 ];
 
 export const storeProducts = [
@@ -174,4 +174,9 @@ export const detailProduct =
         inCart: false,
         count: 0,
         total: 0
+    }
+    
+    export const text = {
+        rush: 
+        "A rash guard, also known as rash vest or rashie, is an athletic shirt made of spandex and nylon or polyester. The name rash guard reflects the fact that the shirt protects the wearer against rashes caused by abrasion, or by sunburn from extended exposure to the sun. These shirts can be worn by themselves, or under a wetsuit. A rash guard by itself is used for light coverage in warm to extreme summer temperatures for several watersports including surfing, canoe polo, water survival training, scuba diving, snorkeling, freediving, wakeboarding, bodysurfing, bodyboarding, windsurfing, kitesurfing, kayaking, stand up paddle surfing, or swimming. There are also lower body rash guards, which are similar to compression shorts to be worn under the surfers' boardshorts, but more specialized for surfers.Rash guards are most often worn in surfing when the weather is too warm for a wetsuit, and to prevent wax-based chafing from sliding on and off of the surf board, on either the torso, or the legs. A surfboard's wax holds sand from the beach that could rub against a surfer's torso while paddling out to the break, or legs while sitting atop one's board. Rash guards also offer some protection from the sun (measured by its Ultraviolet Protection Factor) and slight protection against jelly fish stings and are sometimes worn under wetsuits to prevent chafing. A rash guard helps to prevent irritation caused by rapid impact with surface water and waves as well.Rash guards are thought to have originated in Australia,where they are commonly referred to as rashies or rashys. Variations of the rash guard have made their way into other sports including baseball, American football, water polo, Grappling, Brazilian jiu-jitsu, and mixed martial arts. Athletes who wear rash guards in MMA/Grappling/BJJ seek protection against cuts, mat burns, and the spread of diseases.Other important components of a rash guard include flatlock stitching, and six panel construction. "
     }
