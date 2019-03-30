@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.8.4",
+    "react-classlist-helper": "^1.4.0",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.1",

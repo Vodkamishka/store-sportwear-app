@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className = "MainContainer">
-        <Navbar className = "navbar"/>
+        <div className = "navbar"><Navbar/></div>
         <div className = "wrapper">
         <Switch>
           <Route exact path="/" component = {MainPage} />
@@ -26,6 +26,7 @@ class App extends Component {
         </Switch>
         <Modal />
         </div>
+        
         </div>
       </React.Fragment>
     )

@@ -15,14 +15,12 @@ export default class Details extends Component {
           const {id, company, img, img1, img2, img3, info, price, title, inCart} = value.detailProduct;
           const {addToCart,  openModal} = value;
           return (
-            <div className = "container-fluid">
-            <div className = "row">
-            <div className = "col-10 col-md-6  side">
+            <div className = "detail">
+            <div className = "left  ">
             <ImageFrame title = {title} img = {img} img1 = {img1} img2 = {img2} img3 = {img3} />
             </div>
-            <div className = "col-10 col-md-6 ">
+            <div className = "right">
             <InfoPanel id = {id} info = {info} title = {title} company = {company}  price = {price} inCart = {inCart} addToCart = {addToCart} openModal = {openModal}/>
-            </div>
             </div>
             </div>
           )
@@ -35,8 +33,14 @@ export default class Details extends Component {
 }
 
 const WrapperDetails = styled.div`
-.container-fluid .side  {
-  height: 100vh;
+.left, .right {
+  width: 50%;
+  display: inline-block;
 }
-
+@media screen and (max-width: 1200px) {
+  .right, .left {
+  display: block;
+  width: 100%;
+  }
+}
 `;

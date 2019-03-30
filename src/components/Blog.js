@@ -6,7 +6,7 @@ export default class Blog extends Component {
   render() {
     return (
       <BlogWrapper>
-      <div className = "container">
+      <div className = "container-fluid p-5 ">
         <h5 className="mt-5 py-5 px-2 text-uppercase font-weight-bold">Rash guard</h5>
         <p>{text.rush}</p>
         </div>

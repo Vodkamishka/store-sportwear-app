@@ -11,9 +11,9 @@ export default class InfoPanel extends Component {
     const description = this.props.info;
     return (
       <InfoPanelWrapper>
-        <div className="container">
+        <div className="container m-3">
 
-          <div className="title text-uppercase">
+          <div className="textInfo text-uppercase">
             {this.props.title}
           </div>
 
@@ -63,7 +63,11 @@ export default class InfoPanel extends Component {
   }
 }
 const InfoPanelWrapper = styled.div`
-.title {
+box-sizing: border-box;
+.container {
+  width: 100%;
+}
+.textInfo {
     font-family: "Lato", sans-serif;
     margin-top: 10%;
     font-size: 25px;  
@@ -89,12 +93,13 @@ const InfoPanelWrapper = styled.div`
   border-top: solid 1px black;
   border-bottom: solid 1px black;
   padding: 1% 0 1% 0;
+  width: 90%;
 }
 .buttons {
   margin-top: 3%;
 }
 button {
-  width: 100%;
+  width: 90%;
   text-transform: capitalize;
   font-family: 'Indie Flower', sans-serif;;
   margin: 1% 0;
@@ -104,6 +109,7 @@ button {
   letter-spacing: 0.55rem;
   background: var(--MainBlack);
   color: var(--MainWhite);
+  text-align: center;
 }
 .add:hover {
   background: var(--MainAqua);
@@ -116,7 +122,7 @@ button {
   border-radius: 5px;
 }
 .description {
- 
+ width: 90%;
  font-family: "Frank Ruhl Libre", sans-serif;
 }
 `;

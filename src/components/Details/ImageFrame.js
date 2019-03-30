@@ -18,7 +18,7 @@ export default class ImageFrame extends Component {
       const img3 = this.props.img3;
     return (
       <ImageFrameWrapper>
-      <div className = 'container col-10 col-lg-12 p-5'>
+      <div className = 'container p-5'>
       <div className = "row">
       <Link to = "/">
       <span><i className = "fas fa-home"></i></span>
@@ -29,7 +29,7 @@ export default class ImageFrame extends Component {
       </div>
       <div className = "row">
       <div className = "frame p-5">
-      <img src = {this.state.img} alt = "product" />
+      <img  src = {this.state.img} alt = "product" />
       </div>
       </div>
       <div className  = "row imagesGallery mt-4">
@@ -47,7 +47,7 @@ export default class ImageFrame extends Component {
 
 const ImageFrameWrapper = styled.div`
 .frame {
-    width: 98%;
+    width: 100%;
     height: 600px;
     margin: 0 auto;
     overflow: hidden;
@@ -86,8 +86,5 @@ i:hover {
 .block img {
     width: 80%;
     height: 80%;
-}
-img {
-    transition: all 1s ease;
 }
 `;

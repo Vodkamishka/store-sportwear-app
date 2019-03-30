@@ -13,9 +13,10 @@ export default class Navbar extends Component {
           {value => {
              const { cart, Logo, NavbarList, Fa} = value;
             return (<div className="container">
+              
               <div className="image">
                 <Link to="/">
-                  <img src={Logo.runner} style={{ width: 250, height: 250 }} alt="runner" />
+                  <img className = "img" src={Logo.runner}  alt="runner" />
                 </Link>
               </div>
               <h2>Sportwear</h2>
@@ -44,6 +45,7 @@ export default class Navbar extends Component {
                 </ul>
               </div>
             </div>
+            
             )
           }}
         </ProductConsumer>
@@ -52,25 +54,51 @@ export default class Navbar extends Component {
   }
 }
 const NavbarWrapper = styled.div`
-.container, .list, .image, h2, .button, .socialNetwork {
-  position: absolute;
-}
+
 .container {
+  position: absolute;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
   height: 100vh;
-  width: 20%;
-  left: 0;
+  width: 100%;
   background: black;
   color: white;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%); 
+}
+.image, .list, button, .socialNetwork  {
+  margin: auto;
+}
+.image {
+  margin-top: 5%;
+  width: 75%;
+  height: 28vh;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+}
+.image:hover {
+  mix-blend-mode: luminosity;
+}
+h2 { 
+  text-align: center; 
+  font-size: 3.6vh;
+  margin-top: 10%;
+}
+h2:hover {
+  color: var(--MainRed);
+  transition: all 0.5s linear;
+  
 }
 .list {
-  font-size: 1rem;
+  margin-top: 10%;
+  font-size: 1,8vh;
   letter-spacing: 0.8rem;
   font-family: "Lato", sans-serif;
   text-align: left;  
-  bottom: 25%;
-  left: 7%;  
+ 
 }
 ul {
   padding: 0;
@@ -87,38 +115,21 @@ li:hover {
   color: var(--MainWhite);
   transform: scale(1.02); 
 }
-.image {
-  top: 2%;
-  left: 12%;
-}
-.image:hover {
-  mix-blend-mode: luminosity;
-}
-h2 {
-  letter-spacing: 0.8rem; 
-  top: 34%; 
-  left: 10%;   
-}
-h2:hover {
-  color: var(--MainRed);
-  transition: all 0.5s linear;
-}
 .button {
-  bottom: 14%;
-  right: 6%;
   border: 1px solid var(--MainWhite);
   text-transform: capitalize;
   letter-spacing: 0.55rem;
-  padding: 1.1rem;
+  padding: 1.98vh;
   transition: all 0.5s linear; 
-  width: 93%;
+  width: 97%;
   display: flex;
   font-family: 'Indie Flower', sans-serif;
   color: var(--MainWhite);
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 1.8vh;
 }
-span {
-  padding-right: 15px;   
-}
+
 .button:hover{
   background: var(--MainAqua);
   color: var(--MainBlack);
@@ -126,15 +137,17 @@ span {
   border-radius: 5px;
 }
 .socialNetwork{
-  bottom: 4%;
-  left: 4%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20%
 }
+
 .socialNetwork li {
   display: inline;
-  letter-spacing: 1.3rem; 
-  font-size: 1.2rem; 
+  letter-spacing: 1.2rem; 
+  font-size: 2.2vh; 
   color: var(--MainAqua);
-  position: relative;
+  width: 100%;
 }
 .socialNetwork li:hover {
   color: var(--MainRed);
@@ -142,4 +155,50 @@ span {
 a {
   text-decoration: none;
 }
+
+@media screen and (max-height: 890px) {
+  .button {
+    margin-top: 5%;
+  }
+  .socialNetwork {
+    margin-top: 5%;
+  }
+}
+@media screen and (max-height: 670px) {
+  
+  .image {
+    margin-top: 2%;
+    width: 38%;
+    height: 14vh;
+  }
+  h2 {
+    margin-top: 10%;
+  }
+  
+  
+  
+}
+@media screen and (max-height: 500px) {
+  .button {
+    margin-top: 3%;
+  }
+  .socialNetwork {
+    margin-top: 3%;
+  }
+  
+}
+
+@media screen and (max-height: 400px) {
+  .image {
+    display: none;
+    position: absolute;
+  }
+  h2 {
+    margin-top: 5%;
+  }
+  .list {
+    margin-top: 5%;
+  }
+}
+
 `;

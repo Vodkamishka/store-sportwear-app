@@ -10,10 +10,10 @@ body {
 }
 .MainContainer {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 336px 4fr;
   grid-template-areas: 
    "navbar wrapper"
-   "navbar wrapper"
+   ".      wrapper"
    ".      wrapper"
 }
 .wrapper {
@@ -26,13 +26,10 @@ body {
   position: absolute;
   background: var(--MainBlack);
 }
+
 .slider{
-  grid-area: slider;
   height: 80vh;
   overflow: hidden;
-}
-.productList {
-  grid-area: productList;
 }
 .text {
   font-family: 'Indie Flower', sans-serif;
@@ -50,5 +47,61 @@ body {
   background: var(--MainAqua);
   color: var(--MainWhite);
 }
+@media screen and (max-width: 1200px) {
+  .MainContainer {
+  position: absolute;
+  }
+}
+@media screen and (max-width: 900px) {
+  .MainContainer {
+    grid-template-columns: minmax(576px, 900px);
+    grid-template-areas: 
+    "navbar"
+    "wrapper"
+  }
+}
+@media screen and (max-height: 600px) {
+  .navbar .list li {
+    font-size: 8px;
+  }
+  .navbar .image {
+    width: 20px;
+    height: 20px;
+  }
+  .button {
+    font-size: 10px;
+    padding: 1px;
+  }
+}
+@media screen and (max-width: 576px) {
+    .MainContainer {
+      grid-template-columns: 576px;
+    }
+}
+@media screen and (max-width: 360px) {
+  .MainContainer {
+    grid-template-columns: 360px; 
+  }
+  .navbar .container{
+    width: 360px;
+  } 
+}
+@media screen and (max-width: 336px) {
+  .MainContainer {
+    grid-template-columns: 336px; 
+  }
+  .navbar .container{
+    width: 336px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .MainContainer {
+    grid-template-columns: 320px; 
+  }
+  .navbar .container{
+    width: 320px;
+  }
+}
+
 
 

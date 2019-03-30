@@ -7,11 +7,10 @@ export default class Slider extends Component {
     left: 1344,
     sliderImages: [],
     timer: 0,
-    i: 2
+    i: 2,
+    blocks: ""
   }
-
   componentDidMount = () => {
-
     this.setSlider();
     const timer = setInterval(() => {
       this.moveRight();
@@ -22,7 +21,6 @@ export default class Slider extends Component {
       }
     });
   }
-
   moveLeft = () => {
     clearInterval(this.state.timer);
     this.setState((state) => {
@@ -36,7 +34,6 @@ export default class Slider extends Component {
       sliderImages.push(moveElement);
     }
     );
-    this.setActiveBlockLeft ();
   }
   moveRight = () => {
     let sliderImages = this.state.sliderImages;
@@ -48,7 +45,7 @@ export default class Slider extends Component {
         left: state.left - 1344
       }
     });
-    this.setActiveBlockRight();
+    
   }
   setSlider = () => {
     let tempSlider = [];
@@ -60,13 +57,13 @@ export default class Slider extends Component {
       return { sliderImages: tempSlider };
     })
   }
-  setActiveBlockRight = () => {
+  /*setActiveBlockRight = () => {
     let i = this.state.i;
     let collection = document.querySelectorAll(".blocks");
-    collection[i].classList.remove('active');
+    collection[i].classList = "blocks";
     i = i + 1;
     if (i > collection.length - 1) { i = 0 }
-    collection[i].classList.add('active');
+    collection[i].classList = "blocks active";
     this.setState(() => {
       return { i: i }
     })
@@ -81,11 +78,11 @@ export default class Slider extends Component {
     this.setState(() => {
       return { i: i }
     })
-  }
+  }*/
   render() {
     return (
       <SliderWrapper>
-        <div className="container-fluid col-9 mx-auto col-md-6 col-lg-12">
+        <div className="container-fluid">
 
           {this.state.sliderImages.map(element => <img className="img" src={element.img} alt={element.alt} key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
           <button className="left" onClick={this.moveLeft}><i className="fas fa-angle-left"></i></button>
@@ -109,6 +106,7 @@ background: var(--MainBlack);
 .container-fluid {
     height: 80vh;  
     position: relative;
+    width: 100%;  
 }
 .left, .right {
   position: absolute;
@@ -133,7 +131,8 @@ background: var(--MainBlack);
 }
 .img {
   position: absolute;
-  transition: all 1s linear;  
+  transition: all 1s linear; 
+  
 }
 .blockWrapper {
   position: absolute;
