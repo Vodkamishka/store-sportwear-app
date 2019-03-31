@@ -7,8 +7,7 @@ export default class Slider extends Component {
     left: 1344,
     sliderImages: [],
     timer: 0,
-    i: 2,
-    blocks: ""
+    selected: 2
   }
   componentDidMount = () => {
     this.setSlider();
@@ -23,9 +22,14 @@ export default class Slider extends Component {
   }
   moveLeft = () => {
     clearInterval(this.state.timer);
+    let selected = this.state.selected;
+    if (selected === 1) {
+       selected = 7
+    }
     this.setState((state) => {
       return {
-        left: state.left + 1344
+        left: state.left + 1344,
+        selected: selected - 1
       }
     }, () => {
       let sliderImages = this.state.sliderImages;
@@ -40,12 +44,16 @@ export default class Slider extends Component {
     let moveElement = sliderImages.pop();
     moveElement.id = moveElement.id - 6;
     sliderImages.unshift(moveElement);
+    let selected = this.state.selected;
+    if (selected === 6) {
+       selected = 0
+    }
     this.setState((state) => {
       return {
-        left: state.left - 1344
+        left: state.left - 1344,
+        selected: selected + 1
       }
     });
-    
   }
   setSlider = () => {
     let tempSlider = [];
@@ -57,50 +65,21 @@ export default class Slider extends Component {
       return { sliderImages: tempSlider };
     })
   }
-  /*setActiveBlockRight = () => {
-    let i = this.state.i;
-    let collection = document.querySelectorAll(".blocks");
-    collection[i].classList = "blocks";
-    i = i + 1;
-    if (i > collection.length - 1) { i = 0 }
-    collection[i].classList = "blocks active";
-    this.setState(() => {
-      return { i: i }
-    })
-  }
-  setActiveBlockLeft = () => {
-    let i = this.state.i;
-    let collection = document.querySelectorAll(".blocks");
-    collection[i].classList.remove('active');
-    i = i - 1;
-    if (i < 0) { i = collection.length - 1 }
-    collection[i].classList.add('active');
-    this.setState(() => {
-      return { i: i }
-    })
-  }*/
   render() {
     return (
       <SliderWrapper>
         <div className="container-fluid">
-
           {this.state.sliderImages.map(element => <img className="img" src={element.img} alt={element.alt} key={element.id} style={{ left: 1344 * element.id - this.state.left - 2688 }} />)}
           <button className="left" onClick={this.moveLeft}><i className="fas fa-angle-left"></i></button>
           <button className="right" onClick={this.moveRight}><i className="fas fa-angle-right"></i></button>
           <div className="blockWrapper">
-            <div className="blocks"></div>
-            <div className="blocks"></div>
-            <div className="blocks active"></div>
-            <div className="blocks"></div>
-            <div className="blocks"></div>
-            <div className="blocks"></div>
+            {SliderImages.map(item => <div className={this.state.selected === item.id ? "blocks active" : "blocks"} key = {item.id + 222}></div>)}
           </div>
         </div>
       </SliderWrapper>
     )
   }
 }
-
 const SliderWrapper = styled.div`
 background: var(--MainBlack);
 .container-fluid {
@@ -132,7 +111,6 @@ background: var(--MainBlack);
 .img {
   position: absolute;
   transition: all 1s linear; 
-  
 }
 .blockWrapper {
   position: absolute;
